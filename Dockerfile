@@ -30,9 +30,13 @@ RUN bun test &&\
 
 # copy production dependencies and source code into final image
 FROM base AS release
-COPY --from=install /temp/prod/node_modules node_modules
-COPY --from=prerelease /usr/src/app/index.ts .
-COPY --from=prerelease /usr/src/app/package.json .
+
+# Automatically leverage output traces to reduce image size
+# https://nextjs.org/docs/advanced-features/output-file-tracing
+
+COPY --from=prerelease /usr/src/app/public ./public
+COPY --from=prerelease /usr/src/app/.next/standalone ./
+COPY --from=prerelease /usr/src/app/.next/static ./.next/static
 
 # run the app
 USER bun
