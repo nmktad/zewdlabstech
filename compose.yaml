@@ -1,0 +1,10 @@
+services:
+  zewdlabs-web:
+    container_name: zewdlabs-web
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+
