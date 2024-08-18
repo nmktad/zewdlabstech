@@ -41,4 +41,4 @@ COPY --from=prerelease /usr/src/app/.next/static ./.next/static
 # run the app
 USER bun
 EXPOSE 3000/tcp
-ENTRYPOINT [ "bun", "run", "index.ts" ]
+ENTRYPOINT [ "bun", "server.js" ]
