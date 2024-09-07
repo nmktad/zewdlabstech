@@ -25,6 +25,8 @@ COPY . .
 # [optional] tests & build
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_PUBLIC_SENTRY_DSN=${SENTRY_DSN}
+ENV NEXT_PUBLIC_URL=${URL}
 RUN bun test &&\
 	bun run build
 
