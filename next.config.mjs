@@ -1,7 +1,6 @@
 import { fileURLToPath } from "node:url";
-import createJiti from "jiti";
-import { withContentlayer } from "next-contentlayer";
 import { withSentryConfig } from "@sentry/nextjs";
+import createJiti from "jiti";
 
 const jiti = createJiti(fileURLToPath(import.meta.url));
 
@@ -32,7 +31,7 @@ const nextConfig = {
 };
 
 export default withSentryConfig(
-  withContentlayer(nextConfig),
+  nextConfig,
   {
     // For all available options, see:
     // https://github.com/getsentry/sentry-webpack-plugin#options
