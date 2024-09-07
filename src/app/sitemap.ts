@@ -6,7 +6,6 @@ const addPathToBaseURL = (path: string) => `https://zewdlabs.co${path}`;
 // Next.js Sitemap Generation doesn't support `alternate` refs yet
 // @see https://github.com/vercel/next.js/discussions/55646
 export default function sitemap(): MetadataRoute.Sitemap {
-
   const routes: MetadataRoute.Sitemap = [
     "/",
     "/about",
@@ -27,9 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   //   priority: 1,
   // }));
 
-  return [
-    ...routes,
-  ];
+  return [...routes];
 }
 
 // Enforces that this route is used as static rendering

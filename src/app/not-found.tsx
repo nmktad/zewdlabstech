@@ -23,10 +23,10 @@ export default function NotFound() {
               </p>
             </div>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <button onClick={() => void router.back()}>
+              <button onClick={() => void router.back()} type="button">
                 Go Back
               </button>
-              <button>
+              <button type="button">
                 <Link href="/">Home</Link>
               </button>
             </div>

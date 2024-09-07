@@ -1,22 +1,20 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import type { PropsWithChildren } from "react";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers";
-import { PropsWithChildren } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   preload: true,
-  display: "swap"
+  display: "swap",
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<PropsWithChildren>) {
+export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased min-h-dvh`}>
+      <body className={`${inter.className} min-h-dvh antialiased`}>
         <ThemeProvider attribute="class" enableSystem>
           {children}
         </ThemeProvider>
@@ -27,11 +25,13 @@ export default function RootLayout({
 
 export const metadata: Metadata = {
   title: "Zewdlabs.co | Empowering businesses with technology",
-  description: "Zewdlabs is a software development company that helps businesses grow by building custom software solutions.",
+  description:
+    "Zewdlabs is a software development company that helps businesses grow by building custom software solutions.",
   metadataBase: new URL("https://zewdlabs.co"),
   openGraph: {
     title: "Zewdlabs.co | Empowering businesses with technology",
-    description: "Zewdlabs is a software development company that helps businesses grow by building custom software solutions.",
+    description:
+      "Zewdlabs is a software development company that helps businesses grow by building custom software solutions.",
     url: "https://zewdlabs.co",
     type: "website",
     siteName: "Zewdlabs.co",
@@ -48,13 +48,14 @@ export const metadata: Metadata = {
     "zewdlabs",
     "technology",
     "empowering businesses",
-    "innovative solutions"
+    "innovative solutions",
   ],
   category: "software company",
   applicationName: "Zewdlabs",
   twitter: {
     title: "Zewdlabs.co | Empowering businesses with technology",
-    description: "Zewdlabs is a software development company that helps businesses grow by building custom software solutions.",
+    description:
+      "Zewdlabs is a software development company that helps businesses grow by building custom software solutions.",
     card: "summary_large_image",
     images: ["/api/og"],
   },

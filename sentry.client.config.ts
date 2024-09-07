@@ -23,7 +23,7 @@ Sentry.init({
   // in development and sample at a lower rate in production
   replaysSessionSampleRate: 0.1,
 
-  // TODO: 
+  // TODO:
   // You can remove this option if you're not planning to use the Sentry Session Replay feature:
   // integrations: [
   //   new Sentry.Replay({

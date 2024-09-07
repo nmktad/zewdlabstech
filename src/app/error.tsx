@@ -1,17 +1,16 @@
-"use client"
+"use client";
 
 /**
  * Typescript class based component for custom-error
  * @link https://nextjs.org/docs/advanced-features/custom-error-page
  */
-import type { NextPage } from "next"
-import type { ErrorProps } from "next/error"
-import React from "react"
+import type { ErrorProps } from "next/error";
+import React from "react";
 
-import { redactError } from "@/lib/redact-error";
+import { ErrorPage } from "@/components/error/error-page";
 import { HttpError } from "@/lib/http-error";
 import logger from "@/lib/logger";
-import { ErrorPage } from "@/components/error/error-page";
+import { redactError } from "@/lib/redact-error";
 
 type NextError = Error & { digest?: string };
 
@@ -31,7 +30,7 @@ type CustomErrorProps = {
 
 const log = logger.getSubLogger({ prefix: ["[error]"] });
 
-const CustomError: NextPage<DefaultErrorProps> = (props) => {
+export default function CustomError(props: DefaultErrorProps) {
   const { error } = props;
   let errorObject: CustomErrorProps = {
     message: error.message,
@@ -56,10 +55,10 @@ const CustomError: NextPage<DefaultErrorProps> = (props) => {
   log.info("errorObject: ", errorObject);
 
   return (
-    <ErrorPage statusCode={errorObject.statusCode} error={errorObject.err} message={errorObject.message} />
+    <ErrorPage
+      statusCode={errorObject.statusCode}
+      error={errorObject.err}
+      message={errorObject.message}
+    />
   );
-};
-
-export default CustomError;
-
-
+}

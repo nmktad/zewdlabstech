@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
 import * as Sentry from "@sentry/nextjs";
+import { useEffect } from "react";
 import CustomError, { type DefaultErrorProps } from "./error";
 
 export default function GlobalError(props: DefaultErrorProps) {

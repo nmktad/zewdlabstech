@@ -1,9 +1,9 @@
-import logger from "@/lib/logger";
 import { IS_PRODUCTION } from "@/constants/constants";
+import logger from "@/lib/logger";
 
-const log = logger.getSubLogger({ prefix: [`[redactError]`] });
+const log = logger.getSubLogger({ prefix: ["[redactError]"] });
 
-function shouldRedact<T extends Error>(error: T) {
+function shouldRedact<T extends Error>(_error: T) {
   return (
     // error instanceof Prisma.PrismaClientInitializationError ||
     // error instanceof Prisma.PrismaClientKnownRequestError ||
