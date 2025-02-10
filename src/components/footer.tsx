@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="pb-8 min-h-svh gap-20 flex flex-col justify-end items-center px-5 md:px-10">
       <div className="max-w-7xl w-full">
-        <div className="w-full">Footer</div>
+        <div className="w-full"></div>
         <div className="text-sm w-full border-t border-[#333] pt-8 flex flex-col gap-4 md:flex-row justify-between">
           <p>
             &copy; {new Date().getFullYear()} Zewdlabs. All rights reserved.
