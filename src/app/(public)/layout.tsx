@@ -95,9 +95,25 @@ export default function PublicLayout({
             <div>
               <Link
                 href="/contact"
-                className="inline-flex h-12 animate-shimmer items-center justify-center rounded-4xl border border-gray-800 bg-[linear-gradient(110deg,#101010,45%,#1e2631,55%,#101010)] bg-[length:200%_100%] px-6 font-medium text-foreground transition-colors focus:outline-none"
+                className="inline-flex h-12 gap-4 animate-shimmer items-center justify-center rounded-full border border-gray-800 bg-[linear-gradient(110deg,#101010,45%,#1e2631,55%,#101010)] bg-[length:200%_100%] p-4 font-medium text-foreground transition-colors focus:outline-none"
               >
                 Contact Us
+                <div className="rounded-full bg-foreground w-6 h-6 grid place-items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M4 12L12 4M12 4H6M12 4V10"
+                      stroke="#3A3939"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
               </Link>
             </div>
           </div>
