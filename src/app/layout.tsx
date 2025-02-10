@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Header from "@/components/header";
 import "./globals.css";
-import Footer from "@/components/footer";
 
 export default function RootLayout({
   children,
@@ -10,11 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <body className="antialiased min-h-dvh">{children}</body>
     </html>
   );
 }
