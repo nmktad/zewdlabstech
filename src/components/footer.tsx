@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="pb-8 min-h-svh gap-20 flex flex-col justify-end items-center px-5 md:px-10">
       <div className="max-w-7xl w-full">
         <div className="w-full">Footer</div>
-        <div className="text-sm w-full border-t pt-8 flex items-center justify-between">
+        <div className="text-sm w-full border-t pt-8 flex flex-col md:flex-row items-center justify-between">
           <p>
             &copy; {new Date().getFullYear()} Zewdlabs. All rights reserved.
           </p>
