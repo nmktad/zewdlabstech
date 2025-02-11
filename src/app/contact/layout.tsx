@@ -43,7 +43,7 @@ export default function ContactLayout({
       {children}
       <footer className=" mt-auto flex flex-col justify-end gap-20 px-5 pb-8 md:px-10">
         <div className="mx-auto w-full max-w-7xl">
-          <div className="flex w-full flex-col justify-between gap-4 border-[#333] border-t pt-8 text-sm md:flex-row">
+          <div className="flex w-full flex-col justify-between gap-4 text-sm md:flex-row">
             <p>
               &copy; {new Date().getFullYear()} Zewdlabs. All rights reserved.
             </p>

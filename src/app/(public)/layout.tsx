@@ -1,4 +1,3 @@
-import MobileMenu from '@/components/mobile-menu';
 import Link from 'next/link';
 import type { PropsWithChildren } from 'react';
 
@@ -80,10 +79,6 @@ export default function PublicLayout({
               </Link>
             </div>
           </nav>
-          {/*TODO: Add mobile view*/}
-          <div className="md:hidden">
-            <MobileMenu />
-          </div>
         </div>
       </header>
       {children}
