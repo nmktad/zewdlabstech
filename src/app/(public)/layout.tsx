@@ -1,3 +1,4 @@
+import MobileMenu from '@/components/mobile-menu';
 import Link from 'next/link';
 import type { PropsWithChildren } from 'react';
 
@@ -38,7 +39,7 @@ export default function PublicLayout({
             </Link>
           </div>
           {/* Links and CTA components */}
-          <div className="hidden w-full items-center justify-between md:flex">
+          <nav className="hidden w-full items-center justify-between md:flex">
             {/* Links */}
             <ul className="flex">
               <li>
@@ -78,6 +79,10 @@ export default function PublicLayout({
                 </div>
               </Link>
             </div>
+          </nav>
+          {/*TODO: Add mobile view*/}
+          <div className="md:hidden">
+            <MobileMenu />
           </div>
         </div>
       </header>
