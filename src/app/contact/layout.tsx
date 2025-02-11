@@ -1,14 +1,14 @@
-import type { PropsWithChildren } from "react";
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import type { PropsWithChildren } from 'react';
 
 export default function ContactLayout({
   children,
 }: Readonly<PropsWithChildren>) {
   return (
     <>
-      <header className="px-5 md:px-10 h-16 md:h-20 flex z-50 py-4 items-center">
-        <div className="max-w-7xl mx-auto w-full flex gap-8">
+      <header className="z-50 flex h-16 items-center px-5 py-4 md:h-20 md:px-10 ">
+        <div className="mx-auto flex w-full max-w-7xl gap-8">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/">
@@ -18,6 +18,7 @@ export default function ContactLayout({
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
+                <title>Zewdlabs</title>
                 <path
                   d="M75.7924 6.00671C77.4905 2.63051 80.9468 0.500006 84.726 0.500006H114.079C121.512 0.500006 126.347 8.32128 123.025 14.9702L54.5627 151.97C52.8692 155.359 49.406 157.5 45.6175 157.5H15.82C8.37588 157.5 3.54148 149.657 6.88637 143.007L75.7924 6.00671Z"
                   className="fill-foreground"
@@ -40,17 +41,17 @@ export default function ContactLayout({
         </div>
       </header>
       {children}
-      <footer className="mt-auto pb-8 gap-20 flex flex-col justify-end px-5 md:px-10">
-        <div className="max-w-7xl w-full mx-auto">
-          <div className="text-sm w-full border-t border-[#333] pt-8 flex flex-col gap-4 md:flex-row justify-between">
+      <footer className="mt-auto flex flex-col justify-end gap-20 px-5 pb-8 md:px-10">
+        <div className="mx-auto w-full max-w-7xl">
+          <div className="flex w-full flex-col justify-between gap-4 border-[#333] border-t pt-8 text-sm md:flex-row">
             <p>
               &copy; {new Date().getFullYear()} Zewdlabs. All rights reserved.
             </p>
-            <ul className="flex items-center justify-start flex-wrap gap-4 text-sm">
+            <ul className="flex flex-wrap items-center justify-start gap-4 text-sm">
               <li>
                 <Link
                   href="/sitemap"
-                  className="transition-colors hover:text-foreground/80 duration-300"
+                  className="transition-colors duration-300 hover:text-foreground/80"
                 >
                   Sitemap
                 </Link>
@@ -58,7 +59,7 @@ export default function ContactLayout({
               <li>
                 <Link
                   href="/legals"
-                  className="transition-colors hover:text-foreground/80 duration-300"
+                  className="transition-colors duration-300 hover:text-foreground/80"
                 >
                   Legal
                 </Link>
@@ -74,5 +75,5 @@ export default function ContactLayout({
 }
 
 export const metadata: Metadata = {
-  title: "Contact us",
+  title: 'Contact us',
 };
