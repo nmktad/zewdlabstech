@@ -40,14 +40,14 @@ export default function PublicLayout({
           {/* Links and CTA components */}
           <nav className="hidden w-full items-center justify-between md:flex">
             {/* Links */}
-            <ul className="flex">
+            <ul className="flex font-cal text-foreground text-lg">
               <li>
-                <Link href="#services" className="px-4 py-1 text-white">
+                <Link href="#services" className="px-4 py-1">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="px-4 py-1 text-white">
+                <Link href="#services" className="px-4 py-1">
                   About us
                 </Link>
               </li>
@@ -56,7 +56,7 @@ export default function PublicLayout({
             <div>
               <Link
                 href="/contact"
-                className="inline-flex h-12 animate-shimmer items-center justify-center gap-4 rounded-full border border-gray-800 bg-[length:200%_100%] bg-[linear-gradient(110deg,#101010,45%,#1e2631,55%,#101010)] p-4 font-medium text-foreground transition-colors focus:outline-none"
+                className="inline-flex h-12 animate-shimmer items-center justify-center gap-4 rounded-full border border-gray-800 bg-[length:200%_100%] bg-[linear-gradient(110deg,#101010,45%,#1e2631,55%,#101010)] p-4 font-cal font-medium text-foreground transition-colors focus:outline-none"
               >
                 Contact Us
                 <div className="grid h-6 w-6 place-items-center rounded-full bg-foreground">

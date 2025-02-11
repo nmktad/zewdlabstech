@@ -1,16 +1,30 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import LocalFont from 'next/font/local';
 import type { PropsWithChildren } from 'react';
 import './globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
+  variable: '--font-inter',
+  preload: true,
+  display: 'swap',
+});
+
+const calSans = LocalFont({
+  src: './font/CalSans-SemiBold.woff2',
+  variable: '--font-cal',
+  preload: true,
+  display: 'block',
+  weight: '600',
 });
 
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <html lang="en">
-      <body className={`min-h-dvh antialiased ${inter.className}`}>
+      <body
+        className={`min-h-dvh antialiased ${inter.variable} ${calSans.variable}`}
+      >
         {children}
       </body>
     </html>

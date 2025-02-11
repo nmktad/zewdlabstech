@@ -1,5 +1,5 @@
-import { TextRoll } from "@/components/text-roll";
-import Link from "next/link";
+import { TextRoll } from '@/components/text-roll';
+import Link from 'next/link';
 
 export default function ContactPage() {
   return (
@@ -7,7 +7,7 @@ export default function ContactPage() {
       <div className="mx-auto max-w-7xl">
         <div className="grid auto-cols-fr grid-cols-1 gap-8 py-5 md:grid-cols-2">
           <div className="flex flex-col gap-2 md:gap-4">
-            <h1 className="max-w-xl text-4xl md:text-6xl selection:bg-foreground selection:text-background">
+            <h1 className="max-w-xl font-cal text-4xl selection:bg-foreground selection:text-background md:text-6xl">
               Let&apos;s start a project together
             </h1>
             <div className="flex items-center">
@@ -16,13 +16,15 @@ export default function ContactPage() {
                 href="https://cal.com/zewdlabs/30min"
                 className="hover:-translate-y-1 transform rounded-lg p-2 font-bold text-white transition duration-400"
               >
-                <TextRoll duration={0.2}>Schedule a call</TextRoll>
+                <TextRoll duration={0.2} className="font-cal text-lg">
+                  Schedule a call
+                </TextRoll>
               </Link>
             </div>
           </div>
 
           <div className="lg:mx-6">
-            <div className="mx-auto w-full overflow-hidden rounded-xl bg-card-background text-card-foreground px-8 py-10 shadow-2xl lg:max-w-xl">
+            <div className="mx-auto w-full overflow-hidden rounded-xl bg-card-background px-8 py-10 text-card-foreground shadow-2xl lg:max-w-xl">
               <form>
                 <div className="flex-1">
                   <label htmlFor="fullname" className="mb-2 block text-sm">
