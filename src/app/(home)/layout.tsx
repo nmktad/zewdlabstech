@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import type { PropsWithChildren } from 'react';
+import Link from "next/link";
+import type { PropsWithChildren } from "react";
 
 export default function PublicLayout({
   children,
@@ -42,12 +42,18 @@ export default function PublicLayout({
             {/* Links */}
             <ul className="flex font-cal text-foreground text-lg">
               <li>
-                <Link href="#services" className="px-4 py-1">
+                <Link
+                  href="#services"
+                  className="px-4 py-1 transition-colors duration-300 hover:text-light-foreground"
+                >
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="px-4 py-1">
+                <Link
+                  href="#services"
+                  className="px-4 py-1 transition-colors duration-300 hover:text-light-foreground"
+                >
                   About us
                 </Link>
               </li>
@@ -56,7 +62,7 @@ export default function PublicLayout({
             <div>
               <Link
                 href="/contact"
-                className="inline-flex h-12 animate-shimmer items-center justify-center gap-4 rounded-full border border-gray-800 bg-[length:200%_100%] bg-[linear-gradient(110deg,#101010,45%,#1e2631,55%,#101010)] p-4 font-cal font-medium text-foreground transition-colors focus:outline-none"
+                className="inline-flex h-12 animate-shimmer items-center justify-center gap-4 rounded-full border border-gray-800 bg-[length:200%_100%] bg-[linear-gradient(110deg,#101010,45%,#1e2631,55%,#101010)] p-4 font-cal font-medium text-foreground text-light-foreground transition-colors focus:outline-none"
               >
                 Contact Us
                 <div className="grid h-6 w-6 place-items-center rounded-full bg-foreground">
