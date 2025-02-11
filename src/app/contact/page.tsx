@@ -1,35 +1,8 @@
 import { TextRoll } from "@/app/text-roll";
+import { sendEmail } from "./send-email";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 export default function ContactPage() {
-  async function sendEmail(formData: FormData) {
-    "use server";
-
-    const name = formData.get("fullname");
-    const email = formData.get("email");
-    const message = formData.get("message");
-
-    try {
-      await fetch("https://api.useplunk.com/v1/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.PLUNK_API_KEY}`,
-        },
-        body: JSON.stringify({
-          to: "zewdlabs@gmail.com",
-          subject: `Inquiry from "${name} - ${email}"`,
-          body: message,
-        }),
-      });
-
-      redirect("/");
-    } catch (err) {
-      console.error(err);
-    }
-  }
-
   return (
     <div className="min-h-dvh px-5 md:px-10">
       <div className="mx-auto max-w-7xl">
