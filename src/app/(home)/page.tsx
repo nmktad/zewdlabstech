@@ -12,7 +12,7 @@ export default function Home() {
                 <div className="max-w-3xl">
                   <p className="text-base md:text-lg">
                     Award-winning Webflow agency with a business-first approach.
-                    We build scalable and conversion-focused{' '}
+                    We build scalable and conversion-focused{" "}
                     <span>websites for marketing and IT team.</span>
                   </p>
                 </div>
@@ -24,7 +24,9 @@ export default function Home() {
       </section>
       <section className="px-5 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <h2 className="font-cal text-5xl">Frequently Asked Questions</h2>
+          <h2 className="max-w-5xl font-cal font-medium text-4xl md:text-8xl">
+            Frequently Asked Questions
+          </h2>
         </div>
       </section>
     </div>
