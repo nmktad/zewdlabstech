@@ -61,11 +61,11 @@ export default function MobileMenu() {
   return (
     <div className="relative inline-block md:hidden">
       <motion.div
-        className="absolute top-0 right-0 max-h-[72vh] max-w-[90vw] rounded-3xl bg-foreground"
+        className="absolute top-0 right-0 max-h-[80vh] max-w-[90vw] rounded-3xl bg-foreground"
         variants={{
           open: {
             width: "480px",
-            height: "650px",
+            height: "80vh",
             right: "-2px", // Keeps the right edge fixed
             transition: {
               duration: 0.75,
