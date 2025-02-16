@@ -1,24 +1,24 @@
-"use client";
+'use client';
 
-import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
+import { AnimatePresence, motion } from 'motion/react';
+import { useState } from 'react';
 
 export default function MobileMenu() {
   const [isActive, setIsActive] = useState(false);
 
   const links = [
-    { title: "Projects", href: "/" },
-    { title: "Agency", href: "/" },
-    { title: "Expertise", href: "/" },
-    { title: "Careers", href: "/" },
-    { title: "Contact", href: "/contact" },
+    { title: 'Projects', href: '/' },
+    { title: 'Agency', href: '/' },
+    { title: 'Expertise', href: '/' },
+    { title: 'Careers', href: '/' },
+    { title: 'Contact', href: '/contact' },
   ];
 
   const footerLinks = [
-    { title: "Facebook", href: "/" },
-    { title: "LinkedIn", href: "/" },
-    { title: "Instagram", href: "/" },
-    { title: "Twitter", href: "/" },
+    { title: 'Facebook', href: '/' },
+    { title: 'LinkedIn', href: '/' },
+    { title: 'Instagram', href: '/' },
+    { title: 'Twitter', href: '/' },
   ];
 
   const perspective = {
@@ -37,7 +37,7 @@ export default function MobileMenu() {
     }),
     exit: {
       opacity: 0,
-      transition: { duration: 0.5, type: "linear", ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 0.5, type: 'linear', ease: [0.76, 0, 0.24, 1] },
     },
   };
 
@@ -54,7 +54,7 @@ export default function MobileMenu() {
     }),
     exit: {
       opacity: 0,
-      transition: { duration: 0.5, type: "tween", ease: "easeInOut" },
+      transition: { duration: 0.5, type: 'tween', ease: 'easeInOut' },
     },
   };
 
@@ -64,28 +64,28 @@ export default function MobileMenu() {
         className="absolute top-0 right-0 max-h-[80vh] max-w-[90vw] rounded-3xl bg-foreground"
         variants={{
           open: {
-            width: "480px",
-            height: "80vh",
-            right: "-2px", // Keeps the right edge fixed
+            width: '480px',
+            height: '80vh',
+            right: '-2px', // Keeps the right edge fixed
             transition: {
               duration: 0.75,
-              type: "tween",
+              type: 'tween',
               ease: [0.76, 0, 0.24, 1],
             },
           },
           closed: {
-            width: "100px",
-            height: "40px",
-            right: "-2px", // Keeps the right edge fixed
+            width: '100px',
+            height: '40px',
+            right: '-2px', // Keeps the right edge fixed
             transition: {
               duration: 0.75,
               delay: 0.35,
-              type: "tween",
+              type: 'tween',
               ease: [0.76, 0, 0.24, 1],
             },
           },
         }}
-        animate={isActive ? "open" : "closed"}
+        animate={isActive ? 'open' : 'closed'}
         initial="closed"
       >
         <AnimatePresence>
@@ -136,7 +136,7 @@ export default function MobileMenu() {
         className="relative flex h-10 w-24 items-center justify-center rounded-3xl bg-foreground text-background transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)]"
         onClick={() => setIsActive(!isActive)}
       >
-        <span className="uppercase">{isActive ? "Close" : "Menu"}</span>
+        <span className="uppercase">{isActive ? 'Close' : 'Menu'}</span>
       </button>
     </div>
   );
