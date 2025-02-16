@@ -1,10 +1,10 @@
-import ContactForm from "@/app/contact/form";
-import { TextRoll } from "@/app/contact/text-roll";
-import Link from "next/link";
+import ContactForm from '@/app/contact/form';
+import { TextRoll } from '@/app/contact/text-roll';
+import Link from 'next/link';
 
 export default function ContactPage() {
   return (
-    <div className="min-h-dvh px-5 md:px-10">
+    <div className="min-h-dvh px-5 md:px-10 md:pt-10">
       <div className="mx-auto max-w-7xl">
         <div className="grid auto-cols-fr grid-cols-1 gap-8 py-5 md:grid-cols-2">
           <div className="flex flex-col justify-between gap-6 md:gap-8">
@@ -29,7 +29,7 @@ export default function ContactPage() {
             </div>
 
             <div className="flex flex-col">
-              <h1 className="font-cal font-semibold text-2xl mb-4 text-muted-foreground capitalize lg:text-3xl">
+              <h1 className="mb-4 font-cal font-semibold text-2xl text-muted-foreground capitalize lg:text-3xl">
                 Contact information
               </h1>
 
@@ -129,7 +129,7 @@ export default function ContactPage() {
                               fontWeight="none"
                               fontSize="none"
                               textAnchor="none"
-                              style={{ mixBlendMode: "normal" }}
+                              style={{ mixBlendMode: 'normal' }}
                             >
                               <g transform="scale(5.33333,5.33333)">
                                 <path

@@ -62,13 +62,13 @@ export default function PublicLayout({
             <div>
               <Link
                 href="/contact"
-                className="inline-flex h-12 animate-shimmer items-center justify-center gap-4 rounded-full border border-gray-800 bg-[length:200%_100%] bg-[linear-gradient(110deg,#101010,45%,#1e2631,55%,#101010)] p-4 font-cal font-medium text-foreground text-light-foreground transition-colors focus:outline-none"
+                className="group inline-flex h-12 animate-shimmer items-center justify-center gap-4 rounded-full border border-gray-800 bg-[length:200%_100%] bg-[linear-gradient(110deg,#101010,45%,#1e2631,55%,#101010)] p-4 font-cal font-medium text-light-foreground transition-colors focus:outline-none"
               >
                 Contact Us
                 <div className="grid h-6 w-6 place-items-center rounded-full bg-foreground">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
+                    className="h-5 w-5 duration-200 ease-linear group-hover:rotate-45"
                     viewBox="0 0 16 16"
                     fill="none"
                   >
