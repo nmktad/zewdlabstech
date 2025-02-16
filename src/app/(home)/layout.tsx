@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { PropsWithChildren } from 'react';
+import MobileMenu from './mobile-menu';
 
 export default function PublicLayout({
   children,
@@ -7,8 +8,7 @@ export default function PublicLayout({
   return (
     <>
       <header className="z-50 flex h-16 items-center justify-center px-5 py-4 md:h-20 md:px-10">
-        <div className="flex w-full max-w-7xl gap-8">
-          {/* Logo */}
+        <div className="flex w-full max-w-7xl justify-between gap-8">
           <div className="flex items-center">
             <Link href="/">
               <svg
@@ -85,6 +85,7 @@ export default function PublicLayout({
               </Link>
             </div>
           </nav>
+          <MobileMenu />
         </div>
       </header>
       {children}
