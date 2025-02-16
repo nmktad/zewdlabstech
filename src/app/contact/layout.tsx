@@ -75,5 +75,5 @@ export default function ContactLayout({
 }
 
 export const metadata: Metadata = {
-  title: 'Contact us',
+  title: 'Contact Us',
 };
