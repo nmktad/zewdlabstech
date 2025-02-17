@@ -7,7 +7,7 @@ export default function ContactLayout({
 }: Readonly<PropsWithChildren>) {
   return (
     <>
-      <header className="z-50 flex h-16 items-center px-5 py-4 md:h-20 md:px-10 ">
+      <header className="sticky top-0 z-50 flex h-16 items-center px-5 py-4 backdrop-blur-lg md:h-20 md:px-10 ">
         <div className="mx-auto flex w-full max-w-7xl gap-8">
           {/* Logo */}
           <div className="flex items-center">

@@ -1,13 +1,13 @@
-import Link from "next/link";
-import type { PropsWithChildren } from "react";
-import MobileMenu from "./mobile-menu";
+import Link from 'next/link';
+import type { PropsWithChildren } from 'react';
+import MobileMenu from './mobile-menu';
 
 export default function PublicLayout({
   children,
 }: Readonly<PropsWithChildren>) {
   return (
     <>
-      <header className="fixed z-50 flex h-16 w-full items-center justify-center px-5 py-4 md:h-20 md:px-10">
+      <header className="fixed z-50 flex h-16 w-full items-center justify-center px-5 py-4 backdrop-blur-lg md:h-20 md:px-10">
         <div className="flex w-full max-w-7xl justify-between gap-8">
           <div className="flex items-center">
             <Link href="/">
