@@ -1,4 +1,4 @@
-import LogoTicker from "./logo-ticker";
+import LogoTicker from './logo-ticker';
 
 export default function Home() {
   return (
@@ -14,8 +14,8 @@ export default function Home() {
                 <div className="max-w-3xl">
                   <p className="text-base md:text-lg">
                     Award-winning Webflow agency with a business-first approach.
-                    We build scalable and conversion-focused{" "}
-                    <span>websites for marketing and IT team.</span>
+                    We build scalable and conversion-focused websites for
+                    marketing and IT team.
                   </p>
                 </div>
               </div>

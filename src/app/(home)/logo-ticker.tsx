@@ -1,30 +1,30 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function LogoTicker() {
   const logos = [
     {
-      name: "Logo1",
-      url: "https://cdn.prod.website-files.com/67053868fc01e494462e71c9/67472c83ca1ad8229c225f51_logo-tse-grey.svg",
+      name: 'Logo1',
+      url: 'https://cdn.prod.website-files.com/67053868fc01e494462e71c9/67472c83ca1ad8229c225f51_logo-tse-grey.svg',
     },
 
     {
-      name: "Logo2",
-      url: "https://cdn.prod.website-files.com/67053868fc01e494462e71c9/6745bd0ec0860c1e685a9837_logo-flomodia-grey.svg",
+      name: 'Logo2',
+      url: 'https://cdn.prod.website-files.com/67053868fc01e494462e71c9/6745bd0ec0860c1e685a9837_logo-flomodia-grey.svg',
     },
 
     {
-      name: "Logo3",
-      url: "https://cdn.prod.website-files.com/67053868fc01e494462e71c9/67481ee40d87f1254644ee5d_logo-coudac-grey.svg",
+      name: 'Logo3',
+      url: 'https://cdn.prod.website-files.com/67053868fc01e494462e71c9/67481ee40d87f1254644ee5d_logo-coudac-grey.svg',
     },
 
     {
-      name: "Logo4",
-      url: "https://cdn.prod.website-files.com/67053868fc01e494462e71c9/6745b666711db092819e2a63_logo-club-patrimoine-grey.svg",
+      name: 'Logo4',
+      url: 'https://cdn.prod.website-files.com/67053868fc01e494462e71c9/6745b666711db092819e2a63_logo-club-patrimoine-grey.svg',
     },
 
     {
-      name: "Logo5",
-      url: "https://cdn.prod.website-files.com/67053868fc01e494462e71c9/67481e8338135e82689152e5_logo-weglot-grey.svg",
+      name: 'Logo5',
+      url: 'https://cdn.prod.website-files.com/67053868fc01e494462e71c9/67481e8338135e82689152e5_logo-weglot-grey.svg',
     },
   ];
 
