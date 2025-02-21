@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </section>
       <section className="px-5 md:px-10">
-        <div className="mx-auto flex max-w-7xl place-items-center">
+        <div className="mx-auto flex max-w-7xl place-items-center overflow-hidden rounded-3xl">
           {/* TODO: maybe have an overlay here*/}
           <Link
             href="/"
@@ -35,7 +35,7 @@ export default function Home() {
           >
             <video
               src="https://framerusercontent.com/assets/EohpDns17bOt4UlCGzGZt2hhm8.mp4"
-              className="block h-full w-full rounded-none bg-transparent object-cover"
+              className="block h-full w-full rounded-3xl bg-transparent object-cover"
               style={{ objectPosition: '50% 50%' }}
               poster="https://framerusercontent.com/images/DL4raP0zVFzRwk1GXYpNhjK3qWM.png"
               preload="auto"

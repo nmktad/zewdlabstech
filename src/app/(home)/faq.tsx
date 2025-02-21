@@ -1,39 +1,39 @@
-"use client";
+'use client';
 
-import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
+import { cn } from '@/lib/utils';
+import { AnimatePresence, motion } from 'motion/react';
+import { useState } from 'react';
 
 export default function Faq() {
   const [selected, setSelected] = useState<number | null>(0);
 
   const faqs = [
     {
-      question: "How much does a software project cost?",
+      question: 'How much does a software project cost?',
       answer:
-        "Our pricing is determined on a project-by-project basis, as the final cost depends on various factors, including project scope, technologies used, technical complexity, and time spent. If you’d like an estimate for your project, feel free to reach out to us. We’ll be happy to provide a free consultation and a tailored cost estimate based on your specific business needs.",
+        'Our pricing is determined on a project-by-project basis, as the final cost depends on various factors, including project scope, technologies used, technical complexity, and time spent. If you’d like an estimate for your project, feel free to reach out to us. We’ll be happy to provide a free consultation and a tailored cost estimate based on your specific business needs.',
     },
     {
-      question: "What software development services do you provide?",
+      question: 'What software development services do you provide?',
       answer:
-        "We offer a range of software development services, including web and mobile app development, custom software solutions, UI/UX design, cloud solutions, API development, and system integration. Whether you need a full-scale product or a small feature enhancement, our team is ready to help.",
-    },
-    {
-      question:
-        "Do you provide maintenance and support after project completion?",
-      answer:
-        "Yes! We offer ongoing maintenance and support to ensure your software runs smoothly. Our services include bug fixes, performance optimization, feature updates, and technical support. We can tailor our support plans based on your needs.",
+        'We offer a range of software development services, including web and mobile app development, custom software solutions, UI/UX design, cloud solutions, API development, and system integration. Whether you need a full-scale product or a small feature enhancement, our team is ready to help.',
     },
     {
       question:
-        "How is the software development process run at your organization?",
+        'Do you provide maintenance and support after project completion?',
       answer:
-        "Our development process typically follows Agile methodologies. We begin with requirement gathering and planning, followed by design, development, testing, and deployment. Throughout the process, we maintain open communication, provide regular updates, and incorporate feedback to ensure the final product meets your expectations.",
+        'Yes! We offer ongoing maintenance and support to ensure your software runs smoothly. Our services include bug fixes, performance optimization, feature updates, and technical support. We can tailor our support plans based on your needs.',
     },
     {
-      question: "To what extent does your support continue?",
+      question:
+        'How is the software development process run at your organization?',
       answer:
-        "Our support extends beyond just delivering the software. We offer post-launch maintenance, updates, and technical assistance based on your requirements. Whether it’s resolving issues, scaling up, or adding new features, we are committed to long-term collaboration and ensuring your software remains effective.",
+        'Our development process typically follows Agile methodologies. We begin with requirement gathering and planning, followed by design, development, testing, and deployment. Throughout the process, we maintain open communication, provide regular updates, and incorporate feedback to ensure the final product meets your expectations.',
+    },
+    {
+      question: 'To what extent does your support continue?',
+      answer:
+        'Our support extends beyond just delivering the software. We offer post-launch maintenance, updates, and technical assistance based on your requirements. Whether it’s resolving issues, scaling up, or adding new features, we are committed to long-term collaboration and ensuring your software remains effective.',
     },
   ];
 
@@ -66,8 +66,8 @@ export default function Faq() {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className={cn(
-                        "h-6 w-6 shrink-0 fill-none stroke-current transition duration-400",
-                        selected === index && "rotate-45",
+                        'h-6 w-6 shrink-0 fill-none stroke-current transition duration-400',
+                        selected === index && 'rotate-45'
                       )}
                       viewBox="0 0 24 24"
                       strokeWidth={2}
@@ -83,7 +83,7 @@ export default function Faq() {
                     {selected === index && (
                       <motion.div
                         initial={{ height: 0, marginTop: 0 }}
-                        animate={{ height: "auto", marginTop: 24 }}
+                        animate={{ height: 'auto', marginTop: 24 }}
                         exit={{ height: 0, marginTop: 0 }}
                         className="overflow-hidden"
                       >
@@ -92,7 +92,7 @@ export default function Faq() {
                     )}
                   </AnimatePresence>
                 </div>
-              ),
+              )
           )}
         </div>
       </div>
