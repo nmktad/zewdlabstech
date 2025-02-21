@@ -1,4 +1,8 @@
+'use client';
+
+import { motion } from 'motion/react';
 import Image from 'next/image';
+import { Fragment } from 'react';
 
 export default function LogoTicker() {
   const logos = [
@@ -35,19 +39,33 @@ export default function LogoTicker() {
           Trusted by great companies and organizations around the country
         </h1>
       </div>
-      <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
-        <div className="flex flex-none gap-14">
-          {logos.map((logo) => (
-            <Image
-              width={32}
-              height={32}
-              src={logo.url}
-              key={logo.url}
-              alt={logo.name}
-              className="h-8 w-auto"
-            />
+      <div className="flex w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
+        <motion.div
+          animate={{
+            x: '-50%',
+          }}
+          transition={{
+            duration: 30,
+            ease: 'linear',
+            repeat: Number.POSITIVE_INFINITY,
+          }}
+          className="flex flex-none gap-14"
+        >
+          {Array.from({ length: 2 }).map((_, i) => (
+            <Fragment key={i}>
+              {logos.map((logo) => (
+                <Image
+                  width={32}
+                  height={32}
+                  src={logo.url}
+                  key={logo.url}
+                  alt={logo.name}
+                  className="h-8 w-auto"
+                />
+              ))}
+            </Fragment>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
