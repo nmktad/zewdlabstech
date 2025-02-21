@@ -34,10 +34,10 @@ export default function Home() {
             className="max-w-7xl flex-1 cursor-pointer overflow-hidden rounded-3xl"
           >
             <video
-              src="https://framerusercontent.com/assets/EohpDns17bOt4UlCGzGZt2hhm8.mp4"
+              src="https://opu0od58lf.ufs.sh/f/Zk9HaKoXG51HjTkciwnMdUcOYlE8tyTIfGWh3N1PbwpejriR"
               className="block h-full w-full rounded-3xl bg-transparent object-cover"
               style={{ objectPosition: '50% 50%' }}
-              poster="https://framerusercontent.com/images/DL4raP0zVFzRwk1GXYpNhjK3qWM.png"
+              poster="https://opu0od58lf.ufs.sh/f/Zk9HaKoXG51Hcos9wTnUN7H801xqKGAEomU5JhrFBuY62lkX"
               preload="auto"
               playsInline
               autoPlay
@@ -52,9 +52,9 @@ export default function Home() {
           <LogoTicker />
         </div>
       </section>
-      <section className="px-5 md:px-10">
+      <section className="min-h-dvh rounded-3xl bg-card-background px-5 py-16 text-card-foreground md:px-10 md:py-32">
         <div className="mx-auto max-w-7xl">
-          <h2 className="max-w-5xl font-cal font-medium text-4xl text-light-foreground md:text-5xl lg:text-7xl">
+          <h2 className="max-w-5xl font-cal font-medium text-4xl md:text-5xl lg:text-7xl">
             Projects we&apos;ve worked on
           </h2>
         </div>
