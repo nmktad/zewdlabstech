@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import type { PropsWithChildren } from 'react';
-import MobileMenu from './mobile-menu';
+import Link from "next/link";
+import type { PropsWithChildren } from "react";
+import MobileMenu from "./mobile-menu";
 
 export default function PublicLayout({
   children,
@@ -99,7 +99,7 @@ export default function PublicLayout({
             <ul className="flex flex-wrap items-center justify-start gap-4 text-sm">
               <li>
                 <Link
-                  href="/sitemap"
+                  href="/sitemap.xml"
                   className="transition-colors duration-300 hover:text-foreground/80"
                 >
                   Sitemap
