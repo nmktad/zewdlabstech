@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 // TODO: Get the url from the environment variable
 const addPathToBaseURL = (path: string) =>
-  `${process.env.NEXT_PUBLIC_BASE_URL}/${path}`;
+  `${process.env.NEXT_PUBLIC_BASE_URL}${path}`;
 
 // This allows us to generate a `sitemap.xml` file dynamically based on the needs of the Node.js Website
 // Next.js Sitemap Generation doesn't support `alternate` refs yet
