@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import ProjectCard from './card';
 import Faq from './faq';
 import LogoTicker from './logo-ticker';
+import { Services } from './services';
 
 export default function Home() {
   return (
@@ -52,11 +54,26 @@ export default function Home() {
           <LogoTicker />
         </div>
       </section>
-      <section className="min-h-dvh rounded-3xl bg-card-background px-5 py-16 text-card-foreground md:px-10 md:py-32">
+      <section id="services" className="px-5 py-20 md:px-10 lg:py-40">
         <div className="mx-auto max-w-7xl">
           <h2 className="max-w-5xl font-cal font-medium text-4xl md:text-5xl lg:text-7xl">
-            Projects we&apos;ve worked on
+            Services we provide
           </h2>
+          <Services />
+        </div>
+      </section>
+      <section
+        id="works"
+        className="min-h-dvh rounded-3xl bg-card-background px-5 py-20 text-card-foreground md:px-10 lg:py-40"
+      >
+        <div className="mx-auto max-w-7xl">
+          <h2 className="max-w-5xl font-cal font-medium text-4xl md:text-5xl lg:text-7xl">
+            Works We&apos;ve Delivered So Far
+          </h2>
+          <div className="grid grid-cols-1 gap-8 pt-10 md:grid-cols-2 md:pt-20">
+            <ProjectCard title="Antenehfilms" slug="antenehfilms" />
+            <ProjectCard title="Antenehfilms" slug="antenehfilms" />
+          </div>
         </div>
       </section>
       <Faq />

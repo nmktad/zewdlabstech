@@ -69,4 +69,5 @@ body {
   background: var(--background);
   font-family: var(--font-inter);
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }

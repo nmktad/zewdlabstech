@@ -1,6 +1,6 @@
-import Link from "next/link";
-import type { PropsWithChildren } from "react";
-import MobileMenu from "./mobile-menu";
+import Link from 'next/link';
+import type { PropsWithChildren } from 'react';
+import MobileMenu from './mobile-menu';
 
 export default function PublicLayout({
   children,
@@ -51,10 +51,18 @@ export default function PublicLayout({
               </li>
               <li>
                 <Link
-                  href="#services"
+                  href="#about-us"
                   className="px-4 py-1 transition-colors duration-300 hover:text-light-foreground"
                 >
                   About us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#works"
+                  className="px-4 py-1 transition-colors duration-300 hover:text-light-foreground"
+                >
+                  Works
                 </Link>
               </li>
             </ul>
@@ -89,7 +97,7 @@ export default function PublicLayout({
         </div>
       </header>
       {children}
-      <footer className="flex min-h-svh flex-col items-center justify-end gap-20 px-5 pb-8 md:px-10">
+      <footer className="flex flex-col items-center justify-end gap-20 px-5 pb-8 md:px-10">
         <div className="w-full max-w-7xl">
           <div className="w-full" />
           <div className="flex w-full flex-col justify-between gap-4 border-[#333] border-t pt-8 text-sm md:flex-row">

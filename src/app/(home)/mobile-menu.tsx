@@ -7,8 +7,7 @@ export default function MobileMenu() {
   const [isActive, setIsActive] = useState(false);
 
   const links = [
-    { title: 'Projects', href: '/' },
-    { title: 'Agency', href: '/' },
+    { title: 'Works', href: '/works' },
     { title: 'Expertise', href: '/' },
     { title: 'Careers', href: '/' },
     { title: 'Contact', href: '/contact' },

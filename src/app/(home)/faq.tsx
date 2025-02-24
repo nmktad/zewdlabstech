@@ -38,12 +38,12 @@ export default function Faq() {
   ];
 
   return (
-    <section className="px-5 md:px-10">
+    <section className="px-5 py-20 md:px-10 lg:py-40">
       <div className="mx-auto max-w-7xl">
         <h2 className="max-w-5xl font-cal font-medium text-4xl text-light-foreground md:text-5xl lg:text-7xl">
           Frequently Asked Questions
         </h2>
-        <div className="mt-12 flex flex-col gap-6">
+        <div className="flex flex-col gap-6 pt-10 md:pt-20">
           {faqs.map(
             (pair, index) =>
               pair.question &&

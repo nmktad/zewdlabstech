@@ -4,9 +4,10 @@ import type { MetadataRoute } from "next";
 // @see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots
 export default function robots(): MetadataRoute.Robots {
   return {
+    host: process.env.NEXT_PUBLIC_BASE_URL,
     rules: {
       userAgent: "*",
-      allow: "/",
+      allow: ["/", "/works"],
       disallow: ["/_next/", "/api/"],
     },
     sitemap: `${process.env.NEXT_PUBLIC_BASE_URL}/sitemap.xml`,

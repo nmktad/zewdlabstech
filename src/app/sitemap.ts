@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next";
+import type { MetadataRoute } from 'next';
 
 // TODO: Get the url from the environment variable
 const addPathToBaseURL = (path: string) =>
@@ -8,10 +8,10 @@ const addPathToBaseURL = (path: string) =>
 // Next.js Sitemap Generation doesn't support `alternate` refs yet
 // @see https://github.com/vercel/next.js/discussions/55646
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes: MetadataRoute.Sitemap = ["/", "/contact"].map((route) => ({
+  const routes: MetadataRoute.Sitemap = ['/', '/contact'].map((route) => ({
     url: addPathToBaseURL(route),
     lastModified: new Date(),
-    changeFrequency: "always",
+    changeFrequency: 'always',
     priority: 1,
   }));
 
@@ -20,4 +20,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 // Enforces that this route is used as static rendering
 // @see https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic
-export const dynamic = "error";
+export const dynamic = 'error';
