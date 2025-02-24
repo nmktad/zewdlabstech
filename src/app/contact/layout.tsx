@@ -58,7 +58,8 @@ export default function ContactLayout({
               </li>
               <li>
                 <Link
-                  href="/legals"
+                  href="https://app.websitepolicies.com/policies/view/0zrjzbn1"
+                  target="_blank"
                   className="transition-colors duration-300 hover:text-foreground/80"
                 >
                   Legal
