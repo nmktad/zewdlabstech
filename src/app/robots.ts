@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
     host: process.env.NEXT_PUBLIC_BASE_URL,
     rules: {
       userAgent: '*',
-      allow: ['/', '/works'],
+      allow: ['/', '/works', '/contact'],
       disallow: ['/_next/', '/api/'],
     },
     sitemap: `${process.env.NEXT_PUBLIC_BASE_URL}/sitemap.xml`,
