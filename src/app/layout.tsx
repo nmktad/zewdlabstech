@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import LocalFont from 'next/font/local';
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
         className={`min-h-dvh antialiased ${inter.variable} ${calSans.variable}`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
