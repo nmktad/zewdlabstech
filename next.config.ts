@@ -17,7 +17,7 @@ export default withSentryConfig(nextConfig, {
   // https://github.com/getsentry/sentry-webpack-plugin#options
 
   org: 'zewdlabs',
-  project: 'zewdlabsdotco',
+  project: 'zewdlabstech',
 
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,
