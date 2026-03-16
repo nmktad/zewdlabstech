@@ -1,18 +1,14 @@
 import type { PropsWithChildren } from "react";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import env from "@/env.config";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import Footer from "@/components/custom/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const interSans = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -28,7 +24,7 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`min-h-dvh antialiased ${geistSans.variable} ${geistMono.variable} ${calSans.variable}`}
+        className={`min-h-dvh antialiased ${calSans.variable} ${interSans.variable}`}
       >
         <ThemeProvider
           attribute="class"
@@ -36,7 +32,10 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="flex flex-col min-h-screen">
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
@@ -98,17 +97,17 @@ export const metadata: Metadata = {
     creator: "@zewdlabs",
   },
 
-  icons: [
-    {
-      rel: "icon",
-      url: "/favicon-48x48.png",
-      type: "image/png",
-      sizes: "48x48",
-    },
-    { rel: "icon", url: "/favicon.svg", type: "image/svg+xml" },
-    { rel: "apple-touch-icon", url: "/apple-touch-icon.png", sizes: "180x180" },
-    { rel: "shortcut icon", url: "/favicon.ico" },
-  ],
+  // icons: [
+  //   {
+  //     rel: "icon",
+  //     url: "/favicon-48x48.png",
+  //     type: "image/png",
+  //     sizes: "48x48",
+  //   },
+  //   { rel: "icon", url: "/favicon.svg", type: "image/svg+xml" },
+  //   { rel: "apple-touch-icon", url: "/apple-touch-icon.png", sizes: "180x180" },
+  //   { rel: "shortcut icon", url: "/favicon.ico" },
+  // ],
 
   category: "technology",
   applicationName: "Zewdlabs",
