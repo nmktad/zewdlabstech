@@ -1,13 +1,12 @@
 import { defineEnv } from "envin";
-import * as z from "zod";
+import z from "zod";
 
 const env = defineEnv({
   shared: {
     NODE_ENV: z.enum(["development", "production"]),
   },
   server: {
-    // DATABASE_URL: z.url(),
-    // JWT_SECRET: z.string().min(32),
+    RESEND_API_KEY: z.string().min(1),
   },
   client: {
     NEXT_PUBLIC_BASE_URL:
