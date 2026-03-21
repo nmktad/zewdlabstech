@@ -14,9 +14,9 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="w-full sm:w-fit group inline-flex items-center gap-3 rounded-full border border-gray-500 px-8 py-4 text-lg"
+      className="w-full sm:w-fit group inline-flex hover:cursor-pointer items-center gap-3 rounded-full border border-gray-500 bg-transparent px-8 py-4 text-accent tracking-wider text-white transition-all hover:border-white hover:bg-white hover:text-[#3a3a3a]"
     >
-      {pending ? "Sending..." : "Send us"}
+      {pending ? "Sending..." : "Send"}
       <ArrowUpRight className="h-4 w-4" />
     </button>
   );
@@ -46,7 +46,7 @@ export default function ContactUsForm({
                 key={service}
                 type="button"
                 onClick={() => setSelectedService(service)}
-                className={`rounded-full border px-6 py-3 text-sm transition-all ${
+                className={`rounded-full border px-6 py-3 text-sm transition-all hover:cursor-pointer ${
                   selectedService === service
                     ? "border-white bg-white text-[#3a3a3a]"
                     : "border-gray-500 bg-transparent text-white hover:border-white"

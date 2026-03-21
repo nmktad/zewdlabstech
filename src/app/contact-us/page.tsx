@@ -1,9 +1,8 @@
-"use client";
-
 import Link from "next/link";
 import ContactUsForm from "@/components/custom/contact-us-form";
 import { TextRoll } from "@/components/ui/text-roll";
 import { submitContact } from "./actions";
+import env from "@/env.config";
 
 export default function ContactPage() {
   return (
@@ -19,7 +18,7 @@ export default function ContactPage() {
                 <div className="flex items-center">
                   <p>Want to talk instead?</p>
                   <Link
-                    href="https://cal.com/zewdlabs/30min"
+                    href={env.CONTACT_US_SCHEDULE_LINK}
                     className="group hover:-translate-y-1 transform rounded-lg p-2 font-bold transition duration-400"
                   >
                     <TextRoll

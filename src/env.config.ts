@@ -6,6 +6,7 @@ const env = defineEnv({
     NODE_ENV: z.enum(["development", "production"]),
   },
   server: {
+    CONTACT_US_SCHEDULE_LINK: z.string().url(),
     RESEND_API_KEY: z.string().min(1),
   },
   client: {
