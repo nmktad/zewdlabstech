@@ -6,6 +6,7 @@ import env from "@/env.config";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Footer from "@/components/custom/footer";
+import Header from "@/components/custom/header";
 
 const interSans = Inter({
   variable: "--font-inter",
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
           disableTransitionOnChange
         >
           <div className="flex flex-col min-h-screen">
+            <Header />
             <main className="flex-1">{children}</main>
             <Footer />
           </div>
