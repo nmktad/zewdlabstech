@@ -14,7 +14,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="w-full sm:w-fit h-14 group inline-flex hover:cursor-pointer items-center gap-3 rounded-full border border-gray-500 bg-transparent px-8 py-4 text-accent tracking-wider text-white transition-all hover:border-white hover:bg-white hover:text-[#3a3a3a]"
+      className="h-14 group inline-flex hover:cursor-pointer items-center gap-3 rounded-full border border-gray-500 bg-transparent px-8 py-4 text-accent tracking-wider text-white transition-all hover:border-white hover:bg-white hover:text-[#3a3a3a]"
     >
       {pending ? "Sending..." : "Send"}
       <ArrowUpRight className="h-4 w-4" />
