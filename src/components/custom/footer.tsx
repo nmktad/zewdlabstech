@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="mt-auto border-t border-gray-600 px-6 py-8 md:px-12 lg:px-24">
-      <div className="mx-auto container">
+      <div className="mx-auto container max-w-7xl">
         {/* Top Footer */}
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <svg
