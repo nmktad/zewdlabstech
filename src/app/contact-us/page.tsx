@@ -6,7 +6,7 @@ import env from "@/env.config";
 
 export default function ContactPage() {
   return (
-    <main className="px-6 py-12 md:px-12 lg:px-24 lg:py-36">
+    <main className="px-6 py-24 md:px-12 lg:px-24 lg:py-36">
       <div className="mx-auto container max-w-7xl">
         <div className="flex flex-col gap-8 lg:flex-row lg:gap-16">
           <div className="lg:w-2/5">
