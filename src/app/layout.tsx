@@ -35,7 +35,9 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
         >
           <div className="flex flex-col min-h-screen">
             <Header />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 px-6 py-24 pt-28 md:px-12 lg:px-24 lg:py-36 lg:pt-40">
+              <div className="mx-auto container max-w-7xl">{children}</div>
+            </main>
             <Footer />
           </div>
         </ThemeProvider>
