@@ -36,7 +36,8 @@ export default function LogoTicker() {
     <div className="flex w-full flex-col items-center text-center lg:flex-row lg:text-left">
       <div className="mb-6 lg:mb-0 lg:w-2/6">
         <h1 className="max-w-64 font-normal text-base">
-          Trusted by great companies and organizations around the country
+          Teams come to Zewdlabs when they need thoughtful execution, not just
+          extra hands.
         </h1>
       </div>
       <div className="flex w-full overflow-hidden mask-[linear-gradient(to_right,transparent,black,transparent)]">
@@ -51,8 +52,8 @@ export default function LogoTicker() {
           }}
           className="flex flex-none gap-14"
         >
-          {Array.from({ length: 2 }).map((_, i) => (
-            <Fragment key={i}>
+          {Array.from({ length: 2 }).map((_, index) => (
+            <Fragment key={`logo-group-${index === 0 ? "a" : "b"}`}>
               {logos.map((logo) => (
                 <Image
                   width={32}

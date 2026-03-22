@@ -1,46 +1,44 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 export default function Faq() {
   const [selected, setSelected] = useState<number | null>(0);
 
   const faqs = [
     {
-      question: "How much does a software project cost?",
+      question: "How do you price a project?",
       answer:
-        "Our pricing is determined on a project-by-project basis, as the final cost depends on various factors, including project scope, technologies used, technical complexity, and time spent. If you’d like an estimate for your project, feel free to reach out to us. We’ll be happy to provide a free consultation and a tailored cost estimate based on your specific business needs.",
+        "We price based on scope, complexity, and how much strategic involvement you need from us. After a short discovery conversation, we outline the recommended approach, the likely timeline, and a clear estimate before work begins.",
     },
     {
-      question: "What software development services do you provide?",
+      question: "What kind of work does Zewdlabs take on?",
       answer:
-        "We offer a range of software development services, including web and mobile app development, custom software solutions, UI/UX design, cloud solutions, API development, and system integration. Whether you need a full-scale product or a small feature enhancement, our team is ready to help.",
+        "We design and build websites, SaaS products, internal tools, automation flows, and custom software experiences. Some clients come to us for a full end-to-end build, while others need help improving an existing product that is already live.",
     },
     {
-      question:
-        "Do you provide maintenance and support after project completion?",
+      question: "Can you work with our existing team or codebase?",
       answer:
-        "Yes! We offer ongoing maintenance and support to ensure your software runs smoothly. Our services include bug fixes, performance optimization, feature updates, and technical support. We can tailor our support plans based on your needs.",
+        "Yes. We can plug into an in-house product, design, or marketing team and work with the systems you already have. When needed, we also audit existing code and workflows so improvements happen without unnecessary rework.",
     },
     {
-      question:
-        "How is the software development process run at your organization?",
+      question: "What does your process look like?",
       answer:
-        "Our development process typically follows Agile methodologies. We begin with requirement gathering and planning, followed by design, development, testing, and deployment. Throughout the process, we maintain open communication, provide regular updates, and incorporate feedback to ensure the final product meets your expectations.",
+        "We usually begin with discovery and prioritization, then move into design, implementation, testing, and launch support. You stay close to the work through regular check-ins, visible progress, and practical recommendations at each stage.",
     },
     {
-      question: "To what extent does your support continue?",
+      question: "Do you stay involved after launch?",
       answer:
-        "Our support extends beyond just delivering the software. We offer post-launch maintenance, updates, and technical assistance based on your requirements. Whether it’s resolving issues, scaling up, or adding new features, we are committed to long-term collaboration and ensuring your software remains effective.",
+        "Absolutely. We can continue with maintenance, iteration, feature development, or performance improvements after release. Many teams keep us involved because the first launch is usually the beginning of the real product learning cycle.",
     },
   ];
 
   return (
     <div>
       <h2 className="max-w-5xl font-cal font-medium text-4xl text-light-foreground md:text-5xl lg:text-7xl">
-        Frequently Asked Questions
+        Questions teams usually ask before we start
       </h2>
       <div className="flex flex-col gap-6 pt-8 md:pt-16">
         {faqs.map(
