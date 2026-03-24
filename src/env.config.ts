@@ -3,6 +3,12 @@ import z from "zod";
 
 const env = defineEnv({
   shared: {},
+  envStrict: {
+    CONTACT_US_SCHEDULE_LINK: process.env.CONTACT_US_SCHEDULE_LINK,
+    RESEND_API_KEY: process.env.RESEND_API_KEY,
+    NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
+    NEXT_PUBLIC_SENTRY_DSN: process.env.NEXT_PUBLIC_SENTRY_DSN,
+  },
   server: {
     CONTACT_US_SCHEDULE_LINK: z.string().url(),
     RESEND_API_KEY: z.string().min(1),
