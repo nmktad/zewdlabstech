@@ -3,7 +3,7 @@ import z from "zod";
 
 const env = defineEnv({
   shared: {
-    NODE_ENV: z.enum(["development", "production"]),
+    NODE_ENV: z.enum(["development", "production", "preview"]),
   },
   server: {
     CONTACT_US_SCHEDULE_LINK: z.string().url(),
