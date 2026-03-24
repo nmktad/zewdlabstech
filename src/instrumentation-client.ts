@@ -7,7 +7,7 @@ import env from "./env.config";
 
 Sentry.init({
   dsn: env.NEXT_PUBLIC_SENTRY_DSN,
-  enabled: env.NODE_ENV !== "development",
+  enabled: process.env.NODE_ENV !== "development",
 
   // Add optional integrations for additional features
   integrations: [Sentry.replayIntegration()],
