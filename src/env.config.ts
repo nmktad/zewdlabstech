@@ -14,6 +14,11 @@ const env = defineEnv({
       process.env.NODE_ENV !== "development"
         ? z.string().url()
         : z.string().url().default("http://localhost:3000"),
+
+    NEXT_PUBLIC_SENTRY_DSN:
+      process.env.NODE_ENV !== "development"
+        ? z.string().url()
+        : z.string().url().optional(),
   },
   clientPrefix: "NEXT_PUBLIC_",
 });
