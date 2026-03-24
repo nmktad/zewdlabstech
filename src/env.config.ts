@@ -2,9 +2,7 @@ import { defineEnv } from "envin";
 import z from "zod";
 
 const env = defineEnv({
-  shared: {
-    NODE_ENV: z.enum(["development", "production", "preview"]),
-  },
+  shared: {},
   server: {
     CONTACT_US_SCHEDULE_LINK: z.string().url(),
     RESEND_API_KEY: z.string().min(1),
